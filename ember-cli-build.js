@@ -1,12 +1,10 @@
-"use strict";
-
-const EmberApp = require("ember-cli/lib/broccoli/ember-app");
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      sourceMaps: process.env.EMBER_ENV !== "production" && "inline"
-    }
+      sourceMaps: process.env.EMBER_ENV !== 'production' && 'inline',
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -22,5 +20,20 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  // return app.toTree();
+  let { Webpack } = require('@embroider/webpack');
+
+  return require('@embroider/compat').compatBuild(app, Webpack, {
+    extraPublicTrees: [],
+    packagerOptions: {
+      webpackConfig: {
+        devtool: 'eval-source-map',
+      },
+    },
+    splitAtRoutes: ['index', 'users', 'user'],
+    staticAddonTestSupportTrees: true,
+    staticAddonTrees: true,
+    staticComponents: true,
+    staticHelpers: true,
+  });
 };

@@ -1,63 +1,69 @@
 module.exports = {
   root: true,
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
-      legacyDecorators: true
-    }
+      legacyDecorators: true,
+    },
   },
-  plugins: ["ember"],
-  extends: ["eslint:recommended", "plugin:ember/recommended"],
+  plugins: ['ember', 'qunit'],
+  extends: [
+    'eslint:recommended',
+    'plugin:ember/recommended',
+    'plugin:qunit/recommended',
+  ],
   env: {
-    browser: true
+    browser: true,
   },
   rules: {
-    "ember/no-jquery": "error"
+    'ember/no-jquery': 'error',
   },
   overrides: [
     {
-      files: ["**/*.ts"],
-      parser: "@typescript-eslint/parser",
-      plugins: ["@typescript-eslint", "ember"],
+      files: ['**/*.ts'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint', 'ember', 'qunit'],
       extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:ember/recommended"
-      ]
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:ember/recommended',
+        'plugin:qunit/recommended',
+      ],
     },
     {
       files: [
-        ".eslintrc.js",
-        ".template-lintrc.js",
-        "ember-cli-build.js",
-        "testem.js",
-        "blueprints/*/index.js",
-        "config/**/*.js",
-        "lib/*/index.js",
-        "server/**/*.js"
+        '.eslintrc.js',
+        '.prettierrc.js',
+        '.template-lintrc.js',
+        'ember-cli-build.js',
+        'testem.js',
+        'blueprints/*/index.js',
+        'config/**/*.js',
+        'lib/*/index.js',
+        'server/**/*.js',
       ],
       parserOptions: {
-        sourceType: "script"
+        sourceType: 'script',
       },
       env: {
         browser: false,
-        node: true
+        node: true,
       },
-      plugins: ["node"],
+      plugins: ['node'],
       rules: Object.assign(
         {},
-        require("eslint-plugin-node").configs.recommended.rules,
+        require('eslint-plugin-node').configs.recommended.rules,
         {
           // add your custom rules and overrides for node files here
 
           // this can be removed once the following is fixed
           // https://github.com/mysticatea/eslint-plugin-node/issues/77
-          "node/no-unpublished-require": "off"
+          'node/no-unpublished-require': 'off',
         }
-      )
-    }
-  ]
+      ),
+    },
+  ],
 };
