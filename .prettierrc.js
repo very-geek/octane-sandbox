@@ -1,17 +1,18 @@
 module.exports = {
-  singleQuote: false,
-  trailingComma: 'es5',
+  printWidth: 120,
   overrides: [
     {
-      files: ['*.js', '*.ts'],
+      files: ['*.[jt]s'],
       options: {
+        printWidth: 80,
         singleQuote: true,
+        trailingComma: 'es5',
       },
     },
     {
       files: ['*.hbs'],
       options: {
-        printWidth: 120,
+        parser: 'glimmer',
       },
     },
   ],

@@ -1,5 +1,5 @@
-import EmberRouterBase from "@ember/routing/router";
+import EmberRouterBase from '@ember/routing/router';
 
-declare module "@embroider/router" {
+declare module '@embroider/router' {
   export default class EmberRouter extends EmberRouterBase {}
 }

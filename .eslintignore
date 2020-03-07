@@ -1,9 +1,11 @@
 # unconventional js
 /blueprints/*/files/
+/public/
 /vendor/
 
 # compiled output
 /dist/
+/lib/*/pkg/
 /tmp/
 
 # dependencies
