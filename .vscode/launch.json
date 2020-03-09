@@ -22,6 +22,19 @@
       "sourceMapPathOverrides": {
         "webpack:///./*": "${workspaceFolder}/app/*"
       }
+    },
+    {
+      "type": "firefox",
+      "request": "attach",
+      "name": "Attach to Firefox",
+      "url": "http://localhost:4200*",
+      "webRoot": "${workspaceFolder}",
+      "pathMappings": [
+        {
+          "url": "http://localhost:4200/assets/octane-sandbox",
+          "path": "${workspaceFolder}/app"
+        }
+      ]
     }
   ]
 }

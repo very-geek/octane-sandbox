@@ -1,0 +1,54 @@
+{
+  "assignees": ["nightire"],
+  "commitBodyTable": true,
+  "extends": ["config:base"],
+  "ignoreDeps": ["ember-cli", "ember-source"],
+  "ignorePresets": [":prHourlyLimit2"],
+  "labels": ["类型: 问题", "优先级: 中"],
+  "masterIssue": true,
+  "packageRules": [
+    {
+      "automerge": false,
+      "schedule": "every weekend",
+      "updateTypes": ["major"]
+    },
+    {
+      "automerge": true,
+      "schedule": "after 10pm and before 8am every weekday",
+      "updateTypes": ["minor", "patch"]
+    },
+    {
+      "allowedVersions": "3.7.5",
+      "packageNames": ["typescript"]
+    },
+    {
+      "groupName": "choice form",
+      "groupSlug": "choiceform",
+      "packagePatterns": ["^@choiceform"]
+    },
+    {
+      "groupName": "typescript related",
+      "groupSlug": "typescript",
+      "packagePatterns": ["^@?types\\/?"]
+    },
+    {
+      "groupName": "ember.js related",
+      "groupSlug": "ember",
+      "packageNames": ["loader.js", "qunit-dom"],
+      "packagePatterns": ["^@?broccoli|ember|els|glimmer"]
+    },
+    {
+      "groupName": "eslint related",
+      "groupSlug": "eslint",
+      "packageNames": ["babel-eslint", "prettier"],
+      "packagePatterns": ["^eslint"]
+    }
+  ],
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "rangeStrategy": "auto",
+  "separateMultipleMajor": true,
+  "timezone": "Asia/Shanghai",
+  "vulnerabilityAlerts": {
+    "labels": ["类型: 问题", "优先级: 急"]
+  }
+}

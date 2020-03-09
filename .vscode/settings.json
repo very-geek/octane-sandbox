@@ -3,6 +3,5 @@
     "dist": true,
     "node_modules": true
   },
-  "rust-client.enableMultiProjectSetup": true,
   "typescript.tsdk": "./node_modules/typescript/lib"
 }
