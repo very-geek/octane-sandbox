@@ -1,0 +1,25 @@
+{
+  "printWidth": 120,
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": {
+        "parser": "glimmer"
+      }
+    },
+    {
+      "files": "*.[jt]s",
+      "options": {
+        "printWidth": 80,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    },
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
