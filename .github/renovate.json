@@ -35,7 +35,7 @@
       "groupName": "ember.js related",
       "groupSlug": "ember",
       "packageNames": ["loader.js", "qunit-dom"],
-      "packagePatterns": ["^@?broccoli|ember|els|glimmer"]
+      "packagePatterns": ["^@?broccoli|els|ember|embroider|glimmer"]
     },
     {
       "groupName": "eslint related",

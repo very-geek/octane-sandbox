@@ -7,12 +7,12 @@ module.exports = {
     ecmaVersion: 2020,
     ecmaFeatures: { legacyDecorators: true },
   },
-  plugins: ['prettier', 'ember', 'qunit'],
+  plugins: ['ember', 'qunit', 'prettier'],
   extends: [
     'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
+    'plugin:prettier/recommended',
   ],
   env: { browser: true },
   rules: {
@@ -31,15 +31,16 @@ module.exports = {
         tsconfigRootDir: __dirname,
         project: ['./tsconfig.json'],
       },
-      plugins: ['@typescript-eslint', 'prettier', 'ember', 'qunit'],
+      plugins: ['@typescript-eslint', 'ember', 'qunit', 'prettier'],
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'prettier/@typescript-eslint',
         'plugin:ember/recommended',
         'plugin:qunit/recommended',
+        'plugin:prettier/recommended',
+        'prettier/@typescript-eslint',
       ],
     },
     {
