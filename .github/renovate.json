@@ -18,10 +18,6 @@
       "updateTypes": ["minor", "patch"]
     },
     {
-      "allowedVersions": "3.7.5",
-      "packageNames": ["typescript"]
-    },
-    {
       "groupName": "choice form",
       "groupSlug": "choiceform",
       "packagePatterns": ["^@choiceform"]

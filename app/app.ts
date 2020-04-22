@@ -1,12 +1,8 @@
 import Application from '@ember/application';
-
 import * as Sentry from '@sentry/browser';
 import * as Integrations from '@sentry/integrations';
-
-import Resolver from 'ember-resolver';
-
 import loadInitializers from 'ember-load-initializers';
-
+import Resolver from 'ember-resolver';
 import config from 'octane-sandbox/config/environment';
 
 Sentry.init({
@@ -15,7 +11,7 @@ Sentry.init({
   integrations: [new Integrations.Ember()],
 });
 
-Sentry.configureScope(scope => {
+Sentry.configureScope((scope) => {
   scope.setUser({ id: 'nightire', email: 'nightire@very-geek.com' });
 });
 
