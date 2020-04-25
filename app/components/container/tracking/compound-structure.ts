@@ -8,12 +8,10 @@ interface Options {
 }
 
 export default class TrackingCompoundStructure extends Component {
-  @tracked options: Options = tracked(
-    Object.create({
-      disabled: false,
-      required: true,
-    })
-  );
+  @tracked options: Options = tracked({
+    disabled: false,
+    required: true,
+  });
 
   // options: Options = {
   //   disabled: false,
