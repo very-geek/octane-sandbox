@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     'ember/no-jquery': 'off',
     'no-console': 'error',
+    'no-self-assign': ['error', { props: false }],
     'no-unused-vars': [
       'error',
       { args: 'after-used', argsIgnorePattern: '^_' },
@@ -42,6 +43,12 @@ module.exports = {
         'plugin:prettier/recommended',
         'prettier/@typescript-eslint',
       ],
+      rules: {
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { args: 'after-used', argsIgnorePattern: '^_' },
+        ],
+      },
     },
     {
       files: ['app/router.ts'],

@@ -15,12 +15,12 @@ Sentry.configureScope((scope) => {
   scope.setUser({ id: 'nightire', email: 'nightire@very-geek.com' });
 });
 
-class OctaneSandboxApplication extends Application {
+class OctaneSandbox extends Application {
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;
   Resolver = Resolver;
 }
 
-loadInitializers(OctaneSandboxApplication, config.modulePrefix);
+loadInitializers(OctaneSandbox, config.modulePrefix);
 
-export default OctaneSandboxApplication;
+export default OctaneSandbox;

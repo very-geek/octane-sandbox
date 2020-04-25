@@ -9,7 +9,7 @@ module.exports = function (defaults) {
     },
   });
 
-  if (process.env.USE_EMBROIDER) {
+  if (process.env.EMBROIDER) {
     return require('@embroider/compat').compatBuild(
       app,
       require('@embroider/webpack').Webpack,

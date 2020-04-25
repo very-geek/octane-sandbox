@@ -1,0 +1,6 @@
+<Container::Tracking::CompoundStructure as |options|>
+  <Sandbox @model={{hash disabled=options.disabled required=options.required}} as |model|>
+    {{! template-lint-disable no-log }}
+    {{log model}}
+  </Sandbox>
+</Container::Tracking::CompoundStructure>

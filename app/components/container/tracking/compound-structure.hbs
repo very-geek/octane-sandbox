@@ -1,0 +1,16 @@
+{{#each (array "disabled" "required") as |property|}}
+  <div>
+    <label for="{{property}}State">
+      <code>
+        {{concat "options." property " - " (get this.options property)}}
+      </code>
+      <input
+        id="{{property}}State"
+        checked={{get this.options property}}
+        type="checkbox"
+        {{on "change" (fn this.update property)}}
+      />
+    </label>
+  </div>
+{{/each}}
+{{yield this.options}}
