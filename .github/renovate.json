@@ -1,49 +1,39 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "assignees": ["nightire"],
+  "automerge": true,
   "commitBodyTable": true,
-  "extends": ["config:base"],
-  "ignoreDeps": ["ember-cli", "ember-source"],
-  "ignorePresets": [":prHourlyLimit2"],
+  "extends": [
+    "config:base",
+    ":disableRateLimiting",
+    ":masterIssue",
+    ":semanticCommitScope(renovate)",
+    ":timezone(Asia/Shanghai)"
+  ],
   "labels": ["类型: 问题", "优先级: 中"],
-  "masterIssue": true,
+  "major": {
+    "automerge": false
+  },
   "packageRules": [
     {
-      "automerge": false,
-      "schedule": "every weekend",
-      "updateTypes": ["major"]
-    },
-    {
-      "automerge": true,
-      "schedule": "after 10pm and before 8am every weekday",
-      "updateTypes": ["minor", "patch"]
-    },
-    {
-      "groupName": "choice form",
-      "groupSlug": "choiceform",
-      "packagePatterns": ["^@choiceform"]
-    },
-    {
-      "groupName": "typescript related",
+      "groupName": "typescript packages",
       "groupSlug": "typescript",
       "packagePatterns": ["^@?types\\/?"]
     },
     {
-      "groupName": "ember.js related",
+      "excludePackageNames": ["ember-cli", "ember-source"],
+      "groupName": "ember.js packages",
       "groupSlug": "ember",
       "packageNames": ["loader.js", "qunit-dom"],
       "packagePatterns": ["^@?broccoli|els|ember|embroider|glimmer"]
     },
     {
+      "extends": "packages:linters",
       "groupName": "eslint related",
       "groupSlug": "eslint",
-      "packageNames": ["babel-eslint", "prettier"],
-      "packagePatterns": ["^eslint"]
+      "packageNames": ["ember-template-lint"]
     }
   ],
-  "postUpdateOptions": ["yarnDedupeHighest"],
-  "rangeStrategy": "auto",
-  "separateMultipleMajor": true,
-  "timezone": "Asia/Shanghai",
   "vulnerabilityAlerts": {
     "labels": ["类型: 问题", "优先级: 急"]
   }
