@@ -2525,6 +2525,16 @@
     resolve "^1.8.1"
     semver "^5.5.1"
 
+"@babel/plugin-transform-runtime@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.12.1.tgz#04b792057eb460389ff6a4198e377614ea1e7ba5"
+  integrity sha512-Ac/H6G9FEIkS2tXsZjL4RAdS3L3WHxci0usAnz7laPWUmFiGtj7tIASChqKZMHTSQTQY6xDbOq+V1/vIq3QrWg==
+  dependencies:
+    "@babel/helper-module-imports" "^7.12.1"
+    "@babel/helper-plugin-utils" "^7.10.4"
+    resolve "^1.8.1"
+    semver "^5.5.1"
+
 "@babel/plugin-transform-runtime@^7.9.0":
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.9.0.tgz#45468c0ae74cc13204e1d3b1f4ce6ee83258af0b"
@@ -3218,6 +3228,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.0":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
@@ -3570,10 +3587,10 @@
     babel-core "^6.26.3"
     babel-loader "7"
 
-"@embroider/compat@0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@embroider/compat/-/compat-0.31.0.tgz#e5ed4cdc2b0f2c20d59b548d62d6878fec92af5e"
-  integrity sha512-OuCBnJbQ60IBI0//nE+L/TFu1cDoT0BFtiwuvpCFi4H7gdu4depJ3EAH2DxMURrcOhbnz5mmOhVwo6cHVN8vQg==
+"@embroider/compat@0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@embroider/compat/-/compat-0.32.0.tgz#807a6f4a38e984fa2c8cea67264f065b0b0761b2"
+  integrity sha512-W0TsVSb4ekWFU9xE2QYuR79lYx6n+YhWQL4UYEBRhNRx5kNQzeFcW0HfOkCL2NlKMLKQ5Hs6WrCHrbNy01bZCw==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
@@ -3581,7 +3598,7 @@
     "@babel/preset-env" "^7.12.1"
     "@babel/traverse" "^7.12.1"
     "@babel/types" "^7.12.1"
-    "@embroider/macros" "0.31.0"
+    "@embroider/macros" "0.32.0"
     "@types/babel__code-frame" "^7.0.2"
     "@types/yargs" "^15.0.9"
     assert-never "^1.1.0"
@@ -3593,9 +3610,9 @@
     broccoli-file-creator "^2.1.1"
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^3.0.0"
-    broccoli-persistent-filter "^2.3.1"
-    broccoli-plugin "^1.3.0"
-    broccoli-source "^1.1.0"
+    broccoli-persistent-filter "^3.1.2"
+    broccoli-plugin "^4.0.0"
+    broccoli-source "^3.0.0"
     chalk "^4.1.0"
     debug "^3.1.0"
     ember-cli-htmlbars "^4.0.9"
@@ -3649,57 +3666,25 @@
     walk-sync "^1.1.3"
     wrap-legacy-hbs-plugin-if-needed "^1.0.1"
 
-"@embroider/core@0.30.0":
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-0.30.0.tgz#0bb06020088c916910c5ba172631b0dbd00decd0"
-  integrity sha512-xgvi6WooltBBT+5XsIKYGsb/bO3OB5GRkmVwDwZjn9D1i5WlsWn6XdCBnaPgwcAqS/cAixFIw3hznGMi3L8njA==
+"@embroider/core@0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-0.32.0.tgz#87a62f7d566fdfcf990fb10644e0fb6b4380257e"
+  integrity sha512-YDdzmsHYb3SJZ7d1fWsC+G7VrrHmjUEQ0hp/aa9RJ3uzWXKlfV7xxCIrM3Aifp4TuTYcKEZdnYrgYQfLTJfI0Q==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/parser" "^7.12.3"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
+    "@babel/plugin-transform-runtime" "^7.12.1"
+    "@babel/runtime" "^7.12.5"
     "@babel/traverse" "^7.12.1"
     "@babel/types" "^7.12.1"
-    "@embroider/macros" "0.30.0"
+    "@embroider/macros" "0.32.0"
     assert-never "^1.1.0"
     babel-plugin-syntax-dynamic-import "^6.18.0"
-    broccoli-persistent-filter "^2.2.2"
-    broccoli-plugin "^3.0.0"
-    broccoli-source "^1.1.0"
-    debug "^3.1.0"
-    fast-sourcemap-concat "^1.4.0"
-    filesize "^4.1.2"
-    fs-extra "^7.0.1"
-    fs-tree-diff "^2.0.0"
-    handlebars "^4.4.2"
-    js-string-escape "^1.0.1"
-    jsdom "^16.4.0"
-    json-stable-stringify "^1.0.1"
-    lodash "^4.17.10"
-    pkg-up "^2.0.0"
-    resolve "^1.8.1"
-    resolve-package-path "^1.2.2"
-    semver "^7.3.2"
-    strip-bom "^3.0.0"
-    typescript-memoize "^1.0.0-alpha.3"
-    walk-sync "^1.1.3"
-    wrap-legacy-hbs-plugin-if-needed "^1.0.1"
-
-"@embroider/core@0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@embroider/core/-/core-0.31.0.tgz#2b0d3c0235bfd5620dfff70372328f927719df7f"
-  integrity sha512-ZtKTyB58+rQ2XzoCPpQ2BFRE5gJWF2ajXARVt2Jr9aBiwy9C/pAEzkY7VqpLrCi7CEv+xJsZr1aw0H8ti42aIg==
-  dependencies:
-    "@babel/core" "^7.12.3"
-    "@babel/parser" "^7.12.3"
-    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
-    "@babel/traverse" "^7.12.1"
-    "@babel/types" "^7.12.1"
-    "@embroider/macros" "0.31.0"
-    assert-never "^1.1.0"
-    babel-plugin-syntax-dynamic-import "^6.18.0"
-    broccoli-persistent-filter "^2.2.2"
-    broccoli-plugin "^3.0.0"
-    broccoli-source "^1.1.0"
+    broccoli-node-api "^1.7.0"
+    broccoli-persistent-filter "^3.1.2"
+    broccoli-plugin "^4.0.1"
+    broccoli-source "^3.0.0"
     debug "^3.1.0"
     fast-sourcemap-concat "^1.4.0"
     filesize "^4.1.2"
@@ -3734,42 +3719,27 @@
     resolve "^1.8.1"
     semver "^5.6.0"
 
-"@embroider/macros@0.30.0":
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-0.30.0.tgz#448fcc1d195c62488de227edb413fe9d1a0708ab"
-  integrity sha512-i9z2DbIlpJXwtddfUcR0l8iVeMoZvtM6fEhGowwqcgR71JDN0RAVIzqv1/VgoTstU9zFDgMqxQtSvBrr7ryKbA==
+"@embroider/macros@0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-0.32.0.tgz#a794daacd45d352df8a7af51220d3887480328fa"
+  integrity sha512-bZE0UJz0l0loS2JmpeVun/hCvcTgc35ieZIdQ44lEkSLpfGY1mJXSVo4X2kOp3VauKQMQCPYW/1DtlJ89maO7A==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/traverse" "^7.12.1"
     "@babel/types" "^7.12.1"
-    "@embroider/core" "0.30.0"
+    "@embroider/core" "0.32.0"
     assert-never "^1.1.0"
     ember-cli-babel "^7.23.0"
     lodash "^4.17.10"
     resolve "^1.8.1"
     semver "^7.3.2"
 
-"@embroider/macros@0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-0.31.0.tgz#f832a4c0101c1bd6c9c4b152a80ddd9f433c47d9"
-  integrity sha512-LabqfSHPjuYJEl8l+1jOz5ky9aZBLHzLmt755553ws0qhScSltJYgIOHtkDkavHk4L3RwpaqhWqTZVudCCYILA==
+"@embroider/router@0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@embroider/router/-/router-0.32.0.tgz#d10c318738631a232252ba090a2b4c78203a4f2e"
+  integrity sha512-2BLQSTmwF49c3l2lbw5IVbqpxb3s7n0hcC/xgiWEX73ukYdzK8EB4zqNYONt64iT4bZj9sdtBJIGghkL5FZC5A==
   dependencies:
-    "@babel/core" "^7.12.3"
-    "@babel/traverse" "^7.12.1"
-    "@babel/types" "^7.12.1"
-    "@embroider/core" "0.31.0"
-    assert-never "^1.1.0"
-    ember-cli-babel "^7.23.0"
-    lodash "^4.17.10"
-    resolve "^1.8.1"
-    semver "^7.3.2"
-
-"@embroider/router@0.30.0":
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/@embroider/router/-/router-0.30.0.tgz#dc6e22258e3d116935037f6c121ab022b6e485fd"
-  integrity sha512-oQT3Di310HNy266nEGqEz2JesMJrgd3rRYiHDM/dE8mxfK4Le5MlTX0zyMs6qaSsi4qX1IJL/jbFbSXeAnFX3Q==
-  dependencies:
-    "@embroider/macros" "0.30.0"
+    "@embroider/macros" "0.32.0"
     ember-cli-babel "^7.23.0"
 
 "@embroider/webpack@0.31.0":
@@ -6513,6 +6483,23 @@ broccoli-persistent-filter@^3.1.0:
     symlink-or-copy "^1.0.1"
     sync-disk-cache "^2.0.0"
 
+broccoli-persistent-filter@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-3.1.2.tgz#41da6b9577be09a170ecde185f2c5a6099f99c4e"
+  integrity sha512-CbU95RXXVyy+eJV9XTiHUC7NnsY3EvdVrGzp3YgyvO2bzXZFE5/GzDp4X/VQqX+jsk4qyT1HvMOF0sD1DX68TQ==
+  dependencies:
+    async-disk-cache "^2.0.0"
+    async-promise-queue "^1.0.3"
+    broccoli-plugin "^4.0.3"
+    fs-tree-diff "^2.0.0"
+    hash-for-dep "^1.5.0"
+    heimdalljs "^0.2.1"
+    heimdalljs-logger "^0.1.7"
+    promise-map-series "^0.2.1"
+    rimraf "^3.0.0"
+    symlink-or-copy "^1.0.1"
+    sync-disk-cache "^2.0.0"
+
 broccoli-plugin@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-plugin/-/broccoli-plugin-1.1.0.tgz#73e2cfa05f8ea1e3fc1420c40c3d9e7dc724bf02"
@@ -6556,7 +6543,7 @@ broccoli-plugin@^3.0.0, broccoli-plugin@^3.1.0:
     rimraf "^2.3.4"
     symlink-or-copy "^1.1.8"
 
-broccoli-plugin@^4.0.1, broccoli-plugin@^4.0.2, broccoli-plugin@^4.0.3:
+broccoli-plugin@^4.0.0, broccoli-plugin@^4.0.1, broccoli-plugin@^4.0.2, broccoli-plugin@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/broccoli-plugin/-/broccoli-plugin-4.0.3.tgz#9dcfbfb6a1b27a37cc22e65c071719ce9f92bc1e"
   integrity sha512-CtAIEYq5K+4yQv8c/BHymOteuyjDAJfvy/asu4LudIWcMSS7dTn3yGI5gNBkwHG+qlRangYkHJNVAcDZMQbSVQ==
